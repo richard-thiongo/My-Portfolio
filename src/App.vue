@@ -178,109 +178,107 @@ const copyToClipboard = async (text) => {
           </div>
 
           <!-- Project 3 -->
-          <div class="flex flex-col lg:col-span-2 bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
-            <div class="grid grid-cols-1 lg:grid-cols-2">
-              <div class="aspect-video lg:aspect-auto w-full h-full bg-slate-200 dark:bg-slate-900 border-b lg:border-b-0 lg:border-r border-slate-100 dark:border-slate-700 relative">
-                <img src="https://image.thum.io/get/width/1000/crop/800/https://sdms-web-two.vercel.app/" alt="SDMS Web Two Preview" class="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div class="p-6 lg:p-8 flex flex-col">
-                <h4 class="text-2xl font-bold mb-2">SDMS Web Portal</h4>
-                <p class="text-slate-600 dark:text-slate-400 mb-6">A full-featured School Data Management System containing tailored portals for administrators, teachers, and students.</p>
+          <div class="flex flex-col bg-white dark:bg-slate-800 rounded-2xl overflow-hidden shadow-sm border border-slate-100 dark:border-slate-700">
+            <div class="aspect-video w-full bg-slate-200 dark:bg-slate-900 border-b border-slate-100 dark:border-slate-700 relative">
+              <img src="https://image.thum.io/get/width/1000/crop/800/https://sdms-web-two.vercel.app/" alt="SDMS Web Two Preview" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div class="p-6 flex flex-col flex-1">
+              <h4 class="text-xl font-bold mb-2">SDMS Web Portal</h4>
+              <p class="text-slate-600 dark:text-slate-400 mb-6 flex-1">A full-featured School Data Management System containing tailored portals for administrators, teachers, and students.</p>
+              
+              <div class="bg-slate-50 dark:bg-slate-900 rounded-xl p-4 mb-6 border border-slate-200 dark:border-slate-700 text-sm">
+                <h5 class="font-semibold text-xs text-slate-500 uppercase tracking-wider mb-3"><i class='bx bx-key'></i> Test Credentials</h5>
                 
-                <div class="bg-slate-50 dark:bg-slate-900 rounded-xl p-4 mb-6 border border-slate-200 dark:border-slate-700">
-                  <h5 class="font-semibold text-sm text-slate-500 uppercase tracking-wider mb-4"><i class='bx bx-key'></i> Test Credentials</h5>
+                <div class="space-y-3">
+                  <!-- Admin -->
+                  <div>
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Admin</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div class="flex items-center justify-between gap-1 text-xs bg-white dark:bg-slate-800 px-2 py-1.5 rounded-md border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-center gap-1 overflow-hidden">
+                          <i class='bx bx-envelope text-slate-400 shrink-0'></i>
+                          <span class="font-mono text-slate-700 dark:text-slate-300 truncate">mzeethiongo@gmail.com</span>
+                        </div>
+                        <button @click="copyToClipboard('mzeethiongo@gmail.com')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-0.5" title="Copy">
+                          <i class='bx' :class="copiedText === 'mzeethiongo@gmail.com' ? 'bx-check text-green-500' : 'bx-copy'"></i>
+                        </button>
+                      </div>
+                      <div class="flex items-center justify-between gap-1 text-xs bg-white dark:bg-slate-800 px-2 py-1.5 rounded-md border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-center gap-1 overflow-hidden">
+                          <i class='bx bx-lock-alt text-slate-400 shrink-0'></i>
+                          <span class="font-mono text-slate-700 dark:text-slate-300 truncate">I love it man !</span>
+                        </div>
+                        <button @click="copyToClipboard('I love it man !')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-0.5" title="Copy">
+                          <i class='bx' :class="copiedText === 'I love it man !' ? 'bx-check text-green-500' : 'bx-copy'"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                   
-                  <div class="space-y-4">
-                    <!-- Admin -->
-                    <div>
-                      <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Admin Portal</span>
-                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
-                        <div class="flex items-center justify-between gap-2 text-sm bg-white dark:bg-slate-800 px-3 py-2 rounded-md border border-slate-200 dark:border-slate-700">
-                          <div class="flex items-center gap-2 overflow-hidden">
-                            <i class='bx bx-envelope text-slate-400 shrink-0'></i>
-                            <span class="font-mono text-slate-700 dark:text-slate-300 truncate">mzeethiongo@gmail.com</span>
-                          </div>
-                          <button @click="copyToClipboard('mzeethiongo@gmail.com')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-1" title="Copy">
-                            <i class='bx text-lg' :class="copiedText === 'mzeethiongo@gmail.com' ? 'bx-check text-green-500' : 'bx-copy'"></i>
-                          </button>
+                  <!-- Teacher -->
+                  <div class="pt-2 border-t border-slate-200 dark:border-slate-800">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Teacher</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      <div class="flex items-center justify-between gap-1 text-xs bg-white dark:bg-slate-800 px-2 py-1.5 rounded-md border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-center gap-1 overflow-hidden">
+                          <i class='bx bx-envelope text-slate-400 shrink-0'></i>
+                          <span class="font-mono text-slate-700 dark:text-slate-300 truncate">johndoe@gmail.com</span>
                         </div>
-                        <div class="flex items-center justify-between gap-2 text-sm bg-white dark:bg-slate-800 px-3 py-2 rounded-md border border-slate-200 dark:border-slate-700">
-                          <div class="flex items-center gap-2 overflow-hidden">
-                            <i class='bx bx-lock-alt text-slate-400 shrink-0'></i>
-                            <span class="font-mono text-slate-700 dark:text-slate-300 truncate">I love it man !</span>
-                          </div>
-                          <button @click="copyToClipboard('I love it man !')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-1" title="Copy">
-                            <i class='bx text-lg' :class="copiedText === 'I love it man !' ? 'bx-check text-green-500' : 'bx-copy'"></i>
-                          </button>
+                        <button @click="copyToClipboard('johndoe@gmail.com')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-0.5" title="Copy">
+                          <i class='bx' :class="copiedText === 'johndoe@gmail.com' ? 'bx-check text-green-500' : 'bx-copy'"></i>
+                        </button>
+                      </div>
+                      <div class="flex items-center justify-between gap-1 text-xs bg-white dark:bg-slate-800 px-2 py-1.5 rounded-md border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-center gap-1 overflow-hidden">
+                          <i class='bx bx-lock-alt text-slate-400 shrink-0'></i>
+                          <span class="font-mono text-slate-700 dark:text-slate-300 truncate">I love it man !</span>
                         </div>
+                        <button @click="copyToClipboard('I love it man !')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-0.5" title="Copy">
+                          <i class='bx' :class="copiedText === 'I love it man !' ? 'bx-check text-green-500' : 'bx-copy'"></i>
+                        </button>
                       </div>
                     </div>
-                    
-                    <!-- Teacher -->
-                    <div class="pt-2 border-t border-slate-200 dark:border-slate-800">
-                      <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Teacher Portal</span>
-                      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-1">
-                        <div class="flex items-center justify-between gap-2 text-sm bg-white dark:bg-slate-800 px-3 py-2 rounded-md border border-slate-200 dark:border-slate-700">
-                          <div class="flex items-center gap-2 overflow-hidden">
-                            <i class='bx bx-envelope text-slate-400 shrink-0'></i>
-                            <span class="font-mono text-slate-700 dark:text-slate-300 truncate">johndoe@gmail.com</span>
-                          </div>
-                          <button @click="copyToClipboard('johndoe@gmail.com')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-1" title="Copy">
-                            <i class='bx text-lg' :class="copiedText === 'johndoe@gmail.com' ? 'bx-check text-green-500' : 'bx-copy'"></i>
-                          </button>
-                        </div>
-                        <div class="flex items-center justify-between gap-2 text-sm bg-white dark:bg-slate-800 px-3 py-2 rounded-md border border-slate-200 dark:border-slate-700">
-                          <div class="flex items-center gap-2 overflow-hidden">
-                            <i class='bx bx-lock-alt text-slate-400 shrink-0'></i>
-                            <span class="font-mono text-slate-700 dark:text-slate-300 truncate">I love it man !</span>
-                          </div>
-                          <button @click="copyToClipboard('I love it man !')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-1" title="Copy">
-                            <i class='bx text-lg' :class="copiedText === 'I love it man !' ? 'bx-check text-green-500' : 'bx-copy'"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+                  </div>
 
-                    <!-- Student -->
-                    <div class="pt-2 border-t border-slate-200 dark:border-slate-800">
-                      <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">Student Portal</span>
-                      <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-1">
-                        <div class="flex items-center justify-between gap-2 text-sm bg-white dark:bg-slate-800 px-3 py-2 rounded-md border border-slate-200 dark:border-slate-700">
-                          <div class="flex items-center gap-2 overflow-hidden">
-                            <i class='bx bx-user text-slate-400 shrink-0'></i>
-                            <span class="font-mono text-slate-700 dark:text-slate-300 truncate">Manu</span>
-                          </div>
-                          <button @click="copyToClipboard('Manu')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-1" title="Copy">
-                            <i class='bx text-lg' :class="copiedText === 'Manu' ? 'bx-check text-green-500' : 'bx-copy'"></i>
-                          </button>
+                  <!-- Student -->
+                  <div class="pt-2 border-t border-slate-200 dark:border-slate-800">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider block mb-1">Student</span>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                      <div class="flex items-center justify-between gap-1 text-xs bg-white dark:bg-slate-800 px-2 py-1.5 rounded-md border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-center gap-1 overflow-hidden">
+                          <i class='bx bx-user text-slate-400 shrink-0'></i>
+                          <span class="font-mono text-slate-700 dark:text-slate-300 truncate">Manu</span>
                         </div>
-                        <div class="flex items-center justify-between gap-2 text-sm bg-white dark:bg-slate-800 px-3 py-2 rounded-md border border-slate-200 dark:border-slate-700">
-                          <div class="flex items-center gap-2 overflow-hidden">
-                            <i class='bx bx-user text-slate-400 shrink-0'></i>
-                            <span class="font-mono text-slate-700 dark:text-slate-300 truncate">Kato</span>
-                          </div>
-                          <button @click="copyToClipboard('Kato')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-1" title="Copy">
-                            <i class='bx text-lg' :class="copiedText === 'Kato' ? 'bx-check text-green-500' : 'bx-copy'"></i>
-                          </button>
+                        <button @click="copyToClipboard('Manu')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-0.5" title="Copy">
+                          <i class='bx' :class="copiedText === 'Manu' ? 'bx-check text-green-500' : 'bx-copy'"></i>
+                        </button>
+                      </div>
+                      <div class="flex items-center justify-between gap-1 text-xs bg-white dark:bg-slate-800 px-2 py-1.5 rounded-md border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-center gap-1 overflow-hidden">
+                          <i class='bx bx-user text-slate-400 shrink-0'></i>
+                          <span class="font-mono text-slate-700 dark:text-slate-300 truncate">Kato</span>
                         </div>
-                        <div class="flex items-center justify-between gap-2 text-sm bg-white dark:bg-slate-800 px-3 py-2 rounded-md border border-slate-200 dark:border-slate-700">
-                          <div class="flex items-center gap-2 overflow-hidden">
-                            <i class='bx bx-id-card text-slate-400 shrink-0'></i>
-                            <span class="font-mono text-slate-700 dark:text-slate-300 truncate">8814</span>
-                          </div>
-                          <button @click="copyToClipboard('8814')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-1" title="Copy">
-                            <i class='bx text-lg' :class="copiedText === '8814' ? 'bx-check text-green-500' : 'bx-copy'"></i>
-                          </button>
+                        <button @click="copyToClipboard('Kato')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-0.5" title="Copy">
+                          <i class='bx' :class="copiedText === 'Kato' ? 'bx-check text-green-500' : 'bx-copy'"></i>
+                        </button>
+                      </div>
+                      <div class="flex items-center justify-between gap-1 text-xs bg-white dark:bg-slate-800 px-2 py-1.5 rounded-md border border-slate-200 dark:border-slate-700">
+                        <div class="flex items-center gap-1 overflow-hidden">
+                          <i class='bx bx-id-card text-slate-400 shrink-0'></i>
+                          <span class="font-mono text-slate-700 dark:text-slate-300 truncate">8814</span>
                         </div>
+                        <button @click="copyToClipboard('8814')" class="text-slate-400 hover:text-blue-500 transition-colors shrink-0 p-0.5" title="Copy">
+                          <i class='bx' :class="copiedText === '8814' ? 'bx-check text-green-500' : 'bx-copy'"></i>
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-
-                <a href="https://sdms-web-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="mt-auto inline-flex items-center justify-center gap-2 w-full px-4 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
-                  <i class='bx bx-link-external'></i> Open SDMS Portal
-                </a>
               </div>
+
+              <a href="https://sdms-web-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full px-4 py-2 bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-400 font-medium rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors">
+                <i class='bx bx-link-external'></i> View Live Project
+              </a>
             </div>
           </div>
 
