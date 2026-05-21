@@ -35,7 +35,7 @@ const copyToClipboard = async (text) => {
             Software Developer
           </h2>
           <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
-            I specialize in Frontend (React, Next, Vue) and Backend (Python). 
+            I specialize in Frontend (React, Next, Vue) and Backend (Python, Javascript). 
             I build robust, cross-platform mobile apps with React Native, and design seamless 
             database architectures using MySQL, PostgreSQL, and Supabase.
           </p>
@@ -95,6 +95,7 @@ const copyToClipboard = async (text) => {
             <h4 class="text-lg font-semibold mb-2">Backend & DB</h4>
             <ul class="space-y-2 text-slate-600 dark:text-slate-400">
               <li class="flex items-center gap-2"><i class='bx bxl-python'></i> Python</li>
+              <li class="flex items-center gap-2"><i class='bx bxl-nodejs'></i> Node.js (Express)</li>
               <li class="flex items-center gap-2"><i class='bx bx-data'></i> MySQL</li>
               <li class="flex items-center gap-2"><i class='bx bxs-data'></i> PostgreSQL</li>
               <li class="flex items-center gap-2"><i class='bx bx-cloud'></i> Supabase</li>
